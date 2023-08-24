@@ -78,7 +78,6 @@ export class Banco {
 
 
     public consultarSaldo(numero: string): IConta | undefined {
-        // Utilização do método Array.find() para procurar conta
         return this.contas.find(c => c.Numero === numero);
     }
 
@@ -92,7 +91,6 @@ export class Banco {
 
     public depositar(numero: string, valor: number): void {
         const conta = this.consultarSaldo(numero);
-        // Verificação de conta existente
         if (!conta) {
             throw new Error("Conta não encontrada");
         }
@@ -103,7 +101,6 @@ export class Banco {
         const contaCredito = this.consultarSaldo(numCredito);
         const contaDebito = this.consultarSaldo(numDebito);
 
-        // Verificação de contas existentes
         if (!contaCredito || !contaDebito) {
             throw new Error("Conta(s) não encontrada(s)");
         }

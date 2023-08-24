@@ -1,3 +1,5 @@
+//https://github.com/JoaoFilho33/P.O.O.---ADS/blob/main/atividade06/banco.ts
+
 export class Conta {
 
     constructor(private numero: string, private saldo: number, private titular: string) {}
