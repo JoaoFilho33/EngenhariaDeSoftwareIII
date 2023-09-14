@@ -1,0 +1,9 @@
+5) Demonstre com Classes os principais tipos de coesão
+
+• Coincidente (pior)
+• Lógico
+• Temporal
+• Procedural
+• De comunicação
+• Sequencial
+• Funcional (melhor)

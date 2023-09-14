@@ -1,6 +1,8 @@
 9. É possivel zerar o acoplamento em um software simples ou complexo? Justifique.
 
-É uma meta muito difícil de ser alcançada, pois muitas vezes o acoplamento é até inevitável de acontecer. 
+É uma meta muito difícil de ser alcançada, pois muitas vezes o acoplamento é até inevitável de acontecer. Assim como é
+afirmado no livro Clean Code: Não é aconselhável e nem possível criar tais classes totalmente coesas, por outro lado, gosta-
+ríamos de obter uma alta coesão. 
 Um exemplo disso é a necessidade de dependências externas, como frameworks e bibliotecas, que naturalmente geram 
 acoplamento no código. Além disso, por questões relacionadas à complexidade do software, ocorre um paradoxo: quanto 
 maior o sistema, mais complexo ele se torna, e mais componentes dependentes entre si surgem, o que, por sua vez, aumenta o

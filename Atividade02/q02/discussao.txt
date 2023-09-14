@@ -1,0 +1,18 @@
+2. Contextualize o conceito de coesão de acordo com as fontes abaixo:
+a. Clean Code;
+
+b. Artigo Coesão e Acoplamento em Sistemas Orientados a Objetos
+disponível em https://www.researchgate.net/publication/261026207_Coesao_e_Acoplamento_em_Sistemas_OO;
+
+c. Livro Orientação a Objetos e SOLID para Ninjas Projetando classes
+flexíveis.
+
+-R
+A coesão, conforme abordada nas fontes mencionadas, envolve a organização do código de modo que as classes ou módulos sejam responsáveis 
+por tarefas específicas e bem definidas. Quanto mais coesa for uma unidade de código, mais fácil será compreendê-la e mantê-la, aspectos 
+cruciais para a qualidade e manutenibilidade do software, como enfatizado pelo princípio da Responsabilidade Única (SRP) do SOLID. A coesão 
+também está associada à redução de dependências externas, contribuindo para um código mais robusto e flexível.
+
+Isso se alinha com a ideia apresentada no livro "Clean Code," que preconiza que as classes devem conter um número limitado de variáveis de 
+instância e que cada método deve manipular uma ou mais dessas variáveis. Portanto, quanto mais variáveis um método manipula, mais coeso ele 
+é para a classe.
