@@ -1,0 +1,2 @@
+A ContaBancaria possui agora um método para consultar saldo, permitindo que o Banco obtenha o saldo sem perguntar diretamente, fazendo apenas
+as suas tarefas como depositar e sacar. 

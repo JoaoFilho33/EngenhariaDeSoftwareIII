@@ -1,0 +1,2 @@
+Esse princípio enfatiza desde cedo a importância de não expor o estado dos objetos e sua tomada de decisão para fora do objeto. 
+O que ajuda a diminuir problemas de acoplamento.

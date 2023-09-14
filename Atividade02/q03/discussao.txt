@@ -1,0 +1,4 @@
+03)Refatore o código criando classes Conta, Compra e Cliente de forma que cada uma fique coesa.
+
+Dessa forma Cliente passa a possuir somente métodos do seu interesse, não mais possuindo coisas como: ValorCompra, numeroConta ou saldo. 
+Portanto, eu isolo as responsabilidades para cada classe, ficando assim mais coesa.

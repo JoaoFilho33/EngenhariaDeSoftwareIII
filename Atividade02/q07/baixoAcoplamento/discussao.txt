@@ -1,0 +1,1 @@
+Foi criada agora uma classe genérica "Veiculo". Logo, a classe "Motorista" não está mais acoplada a uma classe específica de veículo.

@@ -1,0 +1,5 @@
+06) Explique com suas palavras o que é o acoplamento entre classes.
+
+Se eu tenho duas classes altamente acopladas, significa que elas possuem forte dependência uma da outra,
+e qualquer mudança em uma pode afetar a outra. Por isso, é desejável ter um baixo acoplamento, pois
+elas são mais independentes e podem ser modificadas separadamente com menos impacto umas nas outras.

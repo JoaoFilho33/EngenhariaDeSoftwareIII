@@ -1,0 +1,8 @@
+9. É possivel zerar o acoplamento em um software simples ou complexo? Justifique.
+
+É uma meta muito difícil de ser alcançada, pois muitas vezes o acoplamento é até inevitável de acontecer. 
+Um exemplo disso é a necessidade de dependências externas, como frameworks e bibliotecas, que naturalmente geram 
+acoplamento no código. Além disso, por questões relacionadas à complexidade do software, ocorre um paradoxo: quanto 
+maior o sistema, mais complexo ele se torna, e mais componentes dependentes entre si surgem, o que, por sua vez, aumenta o
+acoplamento. Portanto, em vez de tentar eliminar completamente o acoplamento, é mais viável pensar em manter uma boa gestão
+do acoplamento, seguindo boas práticas de design e arquitetura de software.

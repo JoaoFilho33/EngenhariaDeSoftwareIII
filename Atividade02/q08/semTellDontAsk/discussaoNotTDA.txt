@@ -1,0 +1,1 @@
+Nesse exemplo a classe "Banco" precisa perguntar a classe "ContaBancaria" pelo saldo, fazendo com que Banco dependa de ContaBancaria.

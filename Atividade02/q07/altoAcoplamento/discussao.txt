@@ -1,0 +1,2 @@
+Com esse exemplo de alto acoplamento o método "dirigir" da classe "Motorista" sempre será chamado como um objeto da classe "carro", dificultando 
+a reutilização da classe "Motorista"

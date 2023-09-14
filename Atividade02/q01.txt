@@ -1,0 +1,8 @@
+1. Qual a relação que coesão possui com as responsabilidades de uma classe?
+
+As classes devem ter um pequeno número de variáveis de instâncias. Cada método deve manipular uma ou mais dessas variáveis. 
+Ou seja, quanto mais variáveis um método manipular, mais coeso ele é para a classe (Clean Code).
+Ao projetar as classes, é fundamental buscar uma alta coesão, garantindo que cada classe tenha responsabilidades 
+bem definidas e relacionadas entre si. Isso contribui para  um código mais limpo, organizado e sustentável. 
+Além disso, a coesão adequada ajuda a reduzir o acoplamento entre classes, promovendo a flexibilidade e a manutenibilidade 
+do sistema.
