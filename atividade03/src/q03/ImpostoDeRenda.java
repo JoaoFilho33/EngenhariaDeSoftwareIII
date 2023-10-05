@@ -33,9 +33,8 @@ public class ImpostoDeRenda {
     }
 
     public static void main(String[] args) {
-        // Exemplo de uso
-        List<Double> rendimentos = List.of(50000.0, 10000.0);
-        List<Double> despesas = List.of(20000.0, 5000.0);
+        List<Double> rendimentos = List.of(60000.0, 12000.0);
+        List<Double> despesas = List.of(25000.0, 7000.0);
 
         ImpostoDeRenda impostoDeRenda = new ImpostoDeRenda("123456789", rendimentos, despesas);
         impostoDeRenda.processar();
