@@ -1,0 +1,2 @@
+O nome foi dado em homenagem a Barbara Liskov, que em 1988 propôs a ideia do princípio artigo "Data Abstraction and Hierarchy".
+E essa ênfase no reconhecimento da cientista foi dado pela importância do princípio para a OOP. 

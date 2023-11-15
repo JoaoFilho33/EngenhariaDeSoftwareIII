@@ -1,0 +1,3 @@
+A principal imagem relacionada ao tema é a do "quadrado-retângulo". Logo, representa a hierarquia de classes, onde um programa base que esteja usando 
+uma classe base do tipo "retângulo" possa ser substituída sem problemas por uma de suas classes derivadas como a "quadrado". Mantendo assim, a integridade 
+do programa.

@@ -1,0 +1,51 @@
+## 03- Cite um exemplo onde a herança pode ser usada de forma conveniente, porém deixa uma impressão de que está sendo mal aplicada.
+
+Percebi essa confusão do uso da herança no [site](https://blogdoft.com.br/2020/03/15/solid-de-verdade-liskov-substitution-principle-lsp/).
+Ele apresenta uma modelagem onde algo é uma coisa. Temos uma classe Carro e outra Bicleta. Ambos supostamente são do tipo Veículo -> Bicleta "é um" Veículo.
+
+Porém, a confusão começa quando temos a seguinte situação:
+
+```cs  
+public class Transporte {
+    public string Nome { get; set; }
+    public Motor Motor { get; set; }
+    public int Velocidade { get; set; }
+
+    public virtual bool LigarMotor() {
+        Motor.Ligar();
+    }
+}
+```
+```cs  
+public class Carro : Transporte {
+    private Tanque _tanque;
+    public Carro(Tanque tanque) {
+        _tanque = tanque;
+    }
+
+    public override bool LigarMotor() {
+        if (_tanque.EstaVazio) {
+            return false;
+        }
+        return base.LigarMotor();
+    }
+}
+```
+
+> Se Bicicleta for do tipo Transporte códigos sem sentidos como o abaixo poderiam ser executados. <Br>
+```
+Bicicleta: Transporte
+```
+
+```cs  
+class Program {
+    static void Main(string[] args) {
+        Transporte bicicleta = new Bicicleta();
+        bicicleta.LigarMotor();
+    }
+}
+```
+
+Como é possível ligar o motor da bicicleta e qualquer explicação para essa situação é compreendida como uma gambiarra.
+<Br>
+Uma forma de contornar isso seria a utilização de interfaces, ou adotar um comportamento que não force uma hirarquia sem sentido. Como por exemplo a adoção de um design mais flexível.

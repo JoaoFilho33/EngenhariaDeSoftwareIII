@@ -1,0 +1,57 @@
+## Nos exemplos que você citou, a composição seria mais aplicável? Refaça-os.
+
+
+Certamente. Composição corigiria o problema.
+
+> Criação de uma classe representando os benefícios.
+```cs
+class Beneficios
+{
+    public double Bonus { get; set; }
+
+    public Beneficios(double bonus)
+    {
+        Bonus = bonus;
+    }
+}
+```
+
+```cs
+class Funcionario {
+    public string Nome { get; set; }
+    public double SalarioBase { get; set; }
+    public Beneficios Beneficios { get; set; }
+
+    public double CalcularSalario() {
+        return SalarioBase + Beneficios.Bonus;
+    }
+}
+```
+
+```cs
+class Gerente : Funcionario
+{
+    public string Departamento { get; set; }
+
+    public Gerente(string nome, double salarioBase, string departamento) {
+        Nome = nome;
+        SalarioBase = salarioBase;
+        Beneficios = new Beneficios(salarioBase * 0.5);
+        Departamento = departamento;
+    }
+}
+```
+
+```cs
+class Programador : Funcionario
+{
+    public string Linguagem { get; set; }
+
+    public Programador(string nome, double salarioBase, string linguagem) {
+        Nome = nome;
+        SalarioBase = salarioBase;
+        Beneficios = new Beneficios(salarioBase * 0.2);
+        Linguagem = linguagem;
+    }
+}
+```

@@ -1,0 +1,43 @@
+## 04- Cite um exemplo onde a herança pode ser usada de forma conveniente, porém deixa futuras expansões comprometidas ou com problemas de design
+
+Um bom exemplo seria o de uma empresa que possui diferentes tipos de funcionários, como por exemplo: Gerente e Programador.
+
+```cs
+class Funcionario {
+    public string Nome { get; set; }
+    public double SalarioBase { get; set; }
+
+    public virtual double CalcularSalario()
+    {
+        return SalarioBase;
+    }
+}
+```
+
+```cs
+class Programador : Funcionario
+{
+    public string Linguagem { get; set; }
+
+    // "override" para adicionar benefícios específicos do programador
+    public override double CalcularSalario()
+    {
+        return base.CalcularSalario() * 1.2;
+    }
+}
+```
+
+```cs
+class Gerente : Funcionario
+{
+    public string Departamento { get; set; }
+
+    public override double CalcularSalario()
+    {
+        return base.CalcularSalario() * 1.5;
+    }
+}
+```
+
+Mas, aonde está o problema? <br>
+Se a hierarquia continuar a crescer com outros tipos de funcionários, ou qualquer outra mudança como nos benefícios, seriam necessárias alterações em várias classes, violando o principio OCP. 

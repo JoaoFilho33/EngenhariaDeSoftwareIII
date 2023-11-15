@@ -1,0 +1,72 @@
+### Refatoração do exemplo do Transporte
+
+```cs
+public class Motor {
+    public void Ligar() {
+        // Lógica para ligar o motor
+    }
+}
+```
+
+```cs
+public interface IMotorizavel {
+    bool LigarMotor();
+}
+```
+
+```cs
+public class Transporte : IMotorizavel {
+    public string Nome { get; set; }
+    public Motor Motor { get; set; }
+    public int Velocidade { get; set; }
+
+    public virtual bool LigarMotor() {
+        Motor.Ligar();
+        return true; 
+    }
+}
+```
+
+```cs
+public class Tanque {
+    public bool EstaVazio { get; set; }
+}
+```
+
+```cs
+ public class Carro : Transporte {
+    private Tanque _tanque;
+
+    public Carro(Tanque tanque) {
+         _tanque = tanque;
+    }
+
+    public override bool LigarMotor() {
+        if (_tanque.EstaVazio) {
+            return false;
+        }
+
+        return base.LigarMotor();
+    }
+}
+```
+
+> Normalmente uma bicicleta não possui motor, porém ele pode ser elétrica e possuir. Logo, ela pode ter um metódo para ligar o motor, ou ser usado para a lógica de colocar o transporte em movimento. Assim, poderíamos usar **Motor.Ligar()**
+
+```cs
+ public class Bicicleta : Transporte {
+    public override bool LigarMotor() {
+        // bicicleta pode possuir uma lógica específica
+        return false;
+    }
+}
+```
+
+```cs
+ class Program {
+    static void Main(string[] args) {
+        Transporte bicicleta = new Bicicleta();
+        bicicleta.LigarMotor(); // aqui seria usada a lógica de andar na bicicleta.
+    }
+}
+```
